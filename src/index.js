@@ -1,15 +1,18 @@
 import { ADDRESS_TYPES } from './constants'
 import ethereum from './blockchains/ethereum'
+import conflux from './blockchains/conflux'
 
 const findDID = did => did.match(/(did:(3|muport):[a-zA-Z0-9])\w+/)[0]
 
 const handlers = {
   [ADDRESS_TYPES.ethereumEOA]: ethereum,
-  [ADDRESS_TYPES.erc1271]: ethereum
+  [ADDRESS_TYPES.erc1271]: ethereum,
+  [ADDRESS_TYPES.conflux]: conflux
 }
 
 const typeDetectors = [
-  ethereum.typeDetector
+  ethereum.typeDetector,
+  conflux.typeDetector
 ]
 
 async function detectType (address, provider) {

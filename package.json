@@ -14,7 +14,8 @@
   "dependencies": {
     "@ethersproject/contracts": "^5.0.0-beta.140",
     "@ethersproject/providers": "^5.0.0-beta.144",
-    "@ethersproject/wallet": "^5.0.0-beta.133"
+    "@ethersproject/wallet": "^5.0.0-beta.133",
+    "js-conflux-sdk": "^0.8.0-alpha"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
