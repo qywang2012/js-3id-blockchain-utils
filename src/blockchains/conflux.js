@@ -1,5 +1,6 @@
 import { ADDRESS_TYPES } from '../constants'
 import { getConsentMessage, encodeRpcCall } from '../utils'
+import { verifyMessage } from '@ethersproject/wallet'
 import { Conflux } from 'js-conflux-sdk'
 
 const isCfxAddress = address => /^0x[a-fA-F0-9]{40}$/.test(address)
@@ -67,9 +68,9 @@ async function createLink (did, address, type, provider, opts) {
   }
 }
 
-async function verifyMessage(message, signature) {
-    //TODO: conflux signature verify
-}
+// async function verifyMessage(message, signature) {
+//     //TODO: conflux signature verify
+// }
 
 async function validateCfxLink (proof) {
   const recoveredAddr = verifyMessage(proof.message, proof.signature).toLowerCase()

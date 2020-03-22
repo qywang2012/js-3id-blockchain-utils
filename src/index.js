@@ -11,8 +11,8 @@ const handlers = {
 }
 
 const typeDetectors = [
-  ethereum.typeDetector,
-  conflux.typeDetector
+  conflux.typeDetector,
+  ethereum.typeDetector
 ]
 
 async function detectType (address, provider) {
